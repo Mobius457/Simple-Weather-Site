@@ -1,10 +1,54 @@
 body {
     font-family: sans-serif;
     text-align: center;
+    background-color: #f4f4f9; /* Light background color */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+h1 {
+    color: #333; /* Darker heading color */
+    padding: 20px;
+    background-color: #e0e0e8; /* Slightly darker background for header */
+    margin-bottom: 20px;
+}
+
+#citySelect {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#getWeatherBtn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #weatherInfo {
     margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Add more styles as you like */
+#weatherInfo h2 {
+    margin-bottom: 10px;
+}
+
+#weatherInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+#weatherInfo li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* Align forecast items to the left */
+}
