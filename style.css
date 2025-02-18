@@ -52,3 +52,40 @@ h1 {
     border-bottom: 1px solid #eee;
     text-align: left; /* Align forecast items to the left */
 }
+/* Weather Condition Styles */.clear-sky {
+    background-image: url("images/clear-sky.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+}.few-clouds {
+    background-image: url("images/few-clouds.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #333; /* Darker text color */
+}.scattered-clouds {
+    background-image: url("images/scattered-clouds.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #333; /* Darker text color */
+}.broken-clouds {
+    background-image: url("images/broken-clouds.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #333; /* Darker text color */
+}.shower-rain {
+    background-image: url("images/shower-rain.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+}.rain {
+    background-image: url("images/rain.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+}.thunderstorm {
+    background-image: url("images/thunderstorm.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+}.snow {
+    background-image: url("images/snow.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #333; /* Darker text color */
+}.mist {
+    background-image: url("images/mist.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    color: #333; /* Darker text color */
+}
