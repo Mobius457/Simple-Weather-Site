@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+}
+
+/* Add more styles as you like */
