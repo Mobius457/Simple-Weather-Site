@@ -1,91 +1,146 @@
 body {
-    font-family: sans-serif;
-    text-align: center;
-    background-color: #f4f4f9; /* Light background color */
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #87CEEB, #E0F2F7);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 h1 {
-    color: #333; /* Darker heading color */
-    padding: 20px;
-    background-color: #e0e0e8; /* Slightly darker background for header */
-    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+    font-size: 2.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+    margin-top: 40px;
+    width: 450px;
+    max-width: 90%;
+    text-align: center;
 }
 
-#citySelect {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+input[type="text"], 
+#country-code,
+#city-forecast {
+    padding: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    width: calc(100% - 30px);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
-#getWeatherBtn {
-    padding: 10px 20px;
-    background-color: #007bff; /* Blue button */
+input[type="text"]:focus,
+#country-code:focus,
+#city-forecast:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button {
+    padding: 14px 30px;
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#weatherInfo {
-    margin-top: 20px;
-    background-color: white;
-    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
-#weatherInfo h2 {
-    margin-bottom: 10px;
+button:hover {
+    background-color: #2980b9;
 }
 
-#weatherInfo ul {
-    list-style: none;
-    padding: 0;
+#weather-info {
+    margin-top: 30px;
+    text-align: center;
 }
 
-#weatherInfo li {
-    padding: 8px;
-    border-bottom: 1px solid #eee;
-    text-align: left; /* Align forecast items to the left */
+#weather-info h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 600;
+}.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}.weather-detail {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    position: relative;
+}.weather-detail:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}.weather-detail h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+}.weather-detail p {
+    font-size: 1.15em;
+    color: #444;
+    margin: 0;
+    line-height: 1.7;
+}.weather-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    display: block;
 }
-/* Weather Condition Styles */.clear-sky {
-    background-image: url("images/clear-sky.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #fff; /* White text for contrast */
-}.few-clouds {
-    background-image: url("images/few-clouds.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #333; /* Darker text color */
-}.scattered-clouds {
-    background-image: url("images/scattered-clouds.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #333; /* Darker text color */
-}.broken-clouds {
-    background-image: url("images/broken-clouds.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #333; /* Darker text color */
-}.shower-rain {
-    background-image: url("images/shower-rain.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #fff; /* White text for contrast */
-}.rain {
-    background-image: url("images/rain.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #fff; /* White text for contrast */
-}.thunderstorm {
-    background-image: url("images/thunderstorm.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #fff; /* White text for contrast */
-}.snow {
-    background-image: url("images/snow.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #333; /* Darker text color */
-}.mist {
-    background-image: url("images/mist.jpg"); /* Replace with your image URL */
-    background-size: cover;
-    color: #333; /* Darker text color */
+
+#forecast-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#forecast-info h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    margin-top: 30px;
+    display: block;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/*... (other styles)... */
+
+.forecast-day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}.forecast-icon {
+  width: 50px;
+  height: 50px;
 }

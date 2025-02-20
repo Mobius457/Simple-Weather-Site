@@ -1,24 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">	
-    <title>Weather Forecast</title>
+    <title>Weather Search</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling for the forecast */
+        #forecast-info {
+            margin-top: 20px;
+        }
+        .forecast-day {
+            display: inline-block; /* Arrange days horizontally */
+            width: 12%; /* Adjust width for desired spacing */
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            text-align: center; /* Center content within each day */
+        }
+        .forecast-icon {
+          width: 50px; /* Adjust icon size as needed */
+          height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Weather in Europe</h1>
 
-    <select id="citySelect">
-        <option value="london">London</option>
-        <option value="paris">Paris</option>
-        <option value="berlin">Berlin</option>
-        </select>
+    <h1>Weather Search</h1>
 
-    <button id="getWeatherBtn">Get Weather</button>
-
-    <div id="weatherInfo">
+    <div class="container">
+        <div>
+            <input type="text" id="location-input" placeholder="Enter city or zip code" onkeydown="handleKeyDown(event)">
+            <select id="country-code">
+                <option value="">Select Country</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="fr">France</option>
+                <option value="de">Germany</option>
+                <option value="it">Italy</option>
+                <option value="es">Spain</option>
+            </select>
         </div>
+        <button onclick="getWeather()">Search</button>
+        <div id="weather-info"></div>
+    </div>
+
+    <div id="forecast-info"></div>  <a href="Travel Blog.html">Read our travel blog</a>
 
     <script src="script.js"></script>
+
 </body>
 </html>
